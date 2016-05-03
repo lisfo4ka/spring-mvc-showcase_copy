@@ -197,7 +197,7 @@
 		<repository>
 			<id>org.springframework.maven.snapshot</id>
 			<name>Spring Maven Snapshot Repository</name>
-			<url>http://10.23.15.62:8081/nexus/content/repositories/snapshots</url>
+			<url>http://repo.spring.io/snapshot</url>
 			<releases><enabled>false</enabled></releases>
 			<snapshots><enabled>true</enabled></snapshots>
 		</repository>
@@ -298,4 +298,16 @@
 			</plugin>
 		</plugins>
 	</build>
+	<distributionManagement>
+		<repository>
+			<id>deployment</id>
+			<name>Releases</name>
+			<url>http://10.23.15.227:8081/nexus/content/repositories/releases</url>
+		</repository>
+		<snapshotRepository>
+			<id>deployment</id>
+			<name>Snapshots</name>
+			<url>http://10.23.15.227:8081/nexus/content/repositories/snapshots</url>
+		</snapshotRepository>
+    </distributionManagement>
 </project>
